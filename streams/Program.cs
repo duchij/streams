@@ -55,13 +55,7 @@ namespace streams
             {
                 Console.WriteLine("Currency: {0} Rate: {1}", nd.Attributes["currency"].Value.ToString(), nd.Attributes["rate"].Value.ToString());
             }
-
-            int a = 25;
-            int b = 10;
-
-            a = a + b;
-            b = a - b;
-            a = a - b;
+                      
 
             Console.WriteLine("Hura");
             Console.ReadKey();
