@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Xml;
+using System.Xml.Serialization;
 
 using System.IO;
 using System.IO.Compression;
@@ -55,7 +56,26 @@ namespace streams
             {
                 Console.WriteLine("Currency: {0} Rate: {1}", nd.Attributes["currency"].Value.ToString(), nd.Attributes["rate"].Value.ToString());
             }
-                      
+
+
+
+          /*  XmlSerializer XmlSer = new XmlSerializer(typeof(Gesmes));
+
+            using (StreamReader sr = new StreamReader(data))
+            {
+                Gesmes Gesmes = (Gesmes)XmlSer.Deserialize(sr);
+            }
+
+            nasledne by sa stym dalo pracovat, ale pretoze c# generator z XML to spravi dost skaredo je to nutne 
+            este poupratovat, principialne to viem spravit, pretoze vramci eZdravia som to robil, ale je to dost
+            pracne, btw vtedy som to robil cez XSD utilitu, ale vysledok je ten isty, proste on vnorene elementy
+            da camel casom napr .tu by to bolo class CubeCubeCube. 
+            Som lenivy, ale pretoze som na tom zabil tyzden studovania viem to spravit ale je to pracne.. Takze principialne
+            Serializacia a Deserializacia tried do XML sa tiez robi cez using :)
+
+                
+          */  
+                          
 
             Console.WriteLine("Hura");
             Console.ReadKey();
